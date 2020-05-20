@@ -20,7 +20,6 @@ function isLoggedIn(req, res, next) {
 
 
 router.get("/", isLoggedIn, (req, res) => {
-    console.log(req.user)
     Users.find().where("users.department", req.user.department)
         .then(users => {
             res.status(200).json({ data: users })
