@@ -2,6 +2,9 @@
   "name": "node-auth2-project",
   "version": "1.0.0",
   "description": "## Topics",
+  "engines": {
+    "node": "12.16.x"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
