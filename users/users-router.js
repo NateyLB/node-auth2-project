@@ -10,7 +10,7 @@ function isLoggedIn(req, res, next) {
     Users.findBy({ "users.username": decoded.username })
         .then(([user]) => {
             console.log(user)
-            if (user.loggedIn == 1) {
+            if (user.loggedIn == true) {
                 req.user = user;
                 next()
             } else {
