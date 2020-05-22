@@ -25,7 +25,7 @@ function findById(id) {
   }
 
 function login(id) {
-    return db("users").where({ id }).update({ loggedIn: 1})
+    return db("users").where({ id }).update({ loggedIn: true})
 }
 
 async function add(user) {
