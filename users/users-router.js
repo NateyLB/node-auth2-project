@@ -6,10 +6,8 @@ const Users = require("./users-model.js");
 
 function isLoggedIn(req, res, next) {
     var decoded = jwtDecode(req.headers.token)
-    console.log(decoded)
     Users.findBy({ "users.username": decoded.username })
         .then(([user]) => {
-            console.log(user)
             if (user.loggedIn == true) {
                 req.user = user;
                 next()
