@@ -5,7 +5,7 @@ exports.up = function(knex) {
       tbl.string("username", 128).notNullable().unique().index();
       tbl.string("password", 256).notNullable();
       tbl.string("department").notNullable();
-      tbl.boolean("loggedIn").notNullable();
+      tbl.boolean("loggedIn").notNullable().defaultTo(false)
   })
 };
 

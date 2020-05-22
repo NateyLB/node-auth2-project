@@ -30,7 +30,7 @@ function login(id) {
 
 async function add(user) {
   try {
-    const [id] = await db("users").insert({username: user.username, department: user.department, password: user.password, loggedIn: false}, "id");
+    const [id] = await db("users").insert({username: user.username, department: user.department, password: user.password}, "id");
     
     return findById(id);
   } catch (error) {
